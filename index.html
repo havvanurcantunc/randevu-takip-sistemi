@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Randevu Takip Sistemi</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>Randevu Takip Sistemi</h1>
+
+        <section class="form-section">
+
+            <h2>Yeni Randevu Oluştur</h2>
+
+            <form id="appointmentForm">
+
+                <label for="date">Tarih:</label>
+                <input type="date" id="date" required>
+
+                <label for="time">Saat:</label>
+                <input type="time" id="time" required>
+
+                <label for="description">Açıklama:</label>
+                <input
+                    type="text"
+                    id="description"
+                    placeholder="Randevu açıklaması"
+                    required
+                >
+
+                <button type="submit">Randevu Ekle</button>
+
+            </form>
+
+        </section>
+
+        <section class="appointments-section">
+
+            <h2>Randevularım</h2>
+
+            <div id="appointmentList">
+                <p>Henüz randevu bulunmamaktadır.</p>
+            </div>
+
+        </section>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
