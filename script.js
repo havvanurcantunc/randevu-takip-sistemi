@@ -6,7 +6,7 @@ let appointments = JSON.parse(localStorage.getItem("appointments")) || [];
 let editingAppointmentId = null;
 
 
-// Randevu ekleme / güncelleme
+
 appointmentForm.addEventListener("submit", function (event) {
 
     event.preventDefault();
@@ -15,8 +15,13 @@ appointmentForm.addEventListener("submit", function (event) {
     const time = document.getElementById("time").value;
     const description = document.getElementById("description").value;
 
+    if (!date || !time || !description) {
+    alert("Lütfen tarih, saat ve açıklama alanlarını doldurun.");
+    return;
+}
 
-    // Eğer düzenleme yapılıyorsa
+
+
     if (editingAppointmentId !== null) {
 
         appointments = appointments.map(function (appointment) {
@@ -42,7 +47,6 @@ appointmentForm.addEventListener("submit", function (event) {
 
     }
 
-    // Yeni randevu ekleniyorsa
     else {
 
         const appointment = {
@@ -56,7 +60,7 @@ appointmentForm.addEventListener("submit", function (event) {
     }
 
 
-    // LocalStorage'a kaydet
+    
     localStorage.setItem(
         "appointments",
         JSON.stringify(appointments)
@@ -68,7 +72,7 @@ appointmentForm.addEventListener("submit", function (event) {
 });
 
 
-// Randevuları ekranda göster
+
 function displayAppointments() {
 
     appointmentList.innerHTML = "";
@@ -115,7 +119,7 @@ function displayAppointments() {
 }
 
 
-// Randevu düzenleme
+
 function editAppointment(id) {
 
     const appointment =
@@ -155,7 +159,7 @@ function editAppointment(id) {
 }
 
 
-// Randevu silme
+
 function deleteAppointment(id) {
 
     appointments = appointments.filter(function (appointment) {
@@ -175,5 +179,4 @@ function deleteAppointment(id) {
 }
 
 
-// Sayfa açıldığında randevuları göster
 displayAppointments();
