@@ -124,3 +124,8 @@ Bu nedenle sayfa yenilendiğinde daha önce oluşturulan randevuların korunmas�
 GitHub Repository:
 
 https://github.com/havvanurcantunc/randevu-takip-sistemi
+## Canlı Demo
+
+Projenin çalışan web uygulamasına aşağıdaki bağlantıdan ulaşılabilir:
+
+https://havvanurcantunc.github.io/randevu-takip-sistemi/
