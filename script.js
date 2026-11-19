@@ -24,6 +24,10 @@ appointmentForm.addEventListener("submit", function (event) {
 
     if (editingAppointmentId !== null) {
 
+              if (!confirm("Randevu bilgilerini güncellemek istediğinize emin misiniz?")) {
+              return;
+}
+
         appointments = appointments.map(function (appointment) {
 
             if (appointment.id === editingAppointmentId) {
